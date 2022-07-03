@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { BiUserPlus } from "react-icons/bi";
 import Table from "../components/Table";
+import Form from "../components/Form";
 
 export default function Home() {
    return (
@@ -13,23 +14,22 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <main className="py-5 ">
+         <main className="py-5  text-slate-700 space-y-12 mx-12 sm:mx-24 xl:mx-32">
             <h1 className="text-xl md:text-5xl text-center font-bold py-10">
                Employee Management
             </h1>
-            <div className="container mx-auto flex justify-between py-5">
+            <div className=" flex justify-between">
                <div className="left flex gap-3">
-                  <button className="flex gap-2 items-center bg-indigo-500 text-white px-4 py-2 border rounded-md hover:bg-indigo-600 hover:text-gray-50 active:bg-indigo-400 drop-shadow-md hover:drop-shadow-xl ease-in duration-300">
+                  <button className="flex gap-2 items-center bg-indigo-500 font-semibold text-white px-4 py-2 border rounded-md hover:bg-indigo-600 hover:text-gray-50 active:bg-indigo-400 drop-shadow-md hover:drop-shadow-xl ease-in duration-300">
                      Add Employee <BiUserPlus size={20} />
                   </button>
                </div>
+            </div>
+            {/* collapsible form */}
+            <Form />
 
-               {/* collapsible form */}
-            </div>
             {/* table */}
-            <div className="container mx-auto">
-               <Table />
-            </div>
+            <Table />
          </main>
       </div>
    );
